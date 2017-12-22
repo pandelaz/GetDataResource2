@@ -4,118 +4,20 @@ package com.example.hongyi.httpgetdataresource;
  * Created by hongyi on 2017/12/22.
  */
 
-class ChargeStation {
+public class Data2ResourceObject {
 
-    private String stationName;
-    private String stationAddr;
-    private String locLongitude;
-    private String locLatitude;
-    private String openFlag;
-    private String isCharge;
-    private String contactName;
-    private String contactMobilNo;
-    private String scoketCount;
-    private String availableCount;
-    private String country;
-    private String town;
+    private Data data;
 
-    public String getStationName() {
-        return stationName;
+    public Data getData() {
+        return data;
     }
 
-    public void setStationName(String stationName) {
-        this.stationName = stationName;
-    }
-
-    public String getStationAddr() {
-        return stationAddr;
-    }
-
-    public void setStationAddr(String stationAddr) {
-        this.stationAddr = stationAddr;
-    }
-
-    public String getLocLongitude() {
-        return locLongitude;
-    }
-
-    public void setLocLongitude(String locLongitude) {
-        this.locLongitude = locLongitude;
-    }
-
-    public String getLocLatitude() {
-        return locLatitude;
-    }
-
-    public void setLocLatitude(String locLatitude) {
-        this.locLatitude = locLatitude;
-    }
-
-    public String getOpenFlag() {
-        return openFlag;
-    }
-
-    public void setOpenFlag(String openFlag) {
-        this.openFlag = openFlag;
-    }
-
-    public String getIsCharge() {
-        return isCharge;
-    }
-
-    public void setIsCharge(String isCharge) {
-        this.isCharge = isCharge;
-    }
-
-    public String getContactName() {
-        return contactName;
-    }
-
-    public void setContactName(String contactName) {
-        this.contactName = contactName;
-    }
-
-    public String getContactMobilNo() {
-        return contactMobilNo;
-    }
-
-    public void setContactMobilNo(String contactMobilNo) {
-        this.contactMobilNo = contactMobilNo;
-    }
-
-    public String getScoketCount() {
-        return scoketCount;
-    }
-
-    public void setScoketCount(String scoketCount) {
-        this.scoketCount = scoketCount;
-    }
-
-    public String getAvailableCount() {
-        return availableCount;
-    }
-
-    public void setAvailableCount(String availableCount) {
-        this.availableCount = availableCount;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public String getTown() {
-        return town;
-    }
-
-    public void setTown(String town) {
-        this.town = town;
+    public void setData(Data data) {
+        this.data = data;
     }
 
 }
+
 class Data {
 
     private String uPDATETIME;
@@ -135,107 +37,6 @@ class Data {
 
     public void setPark(Park[] park) {
         this.park = park;
-    }
-
-}
-class Entrancecoord {
-
-    private EntrancecoordInfo[] entrancecoordInfo = null;
-
-    public EntrancecoordInfo[] getEntrancecoordInfo() {
-        return entrancecoordInfo;
-    }
-
-    public void setEntrancecoordInfo(EntrancecoordInfo[] entrancecoordInfo) {
-        this.entrancecoordInfo = entrancecoordInfo;
-    }
-
-}
-class EntrancecoordInfo {
-
-    private String xcod;
-    private String ycod;
-    private String addresss;
-
-    public String getXcod() {
-        return xcod;
-    }
-
-    public void setXcod(String xcod) {
-        this.xcod = xcod;
-    }
-
-    public String getYcod() {
-        return ycod;
-    }
-
-    public void setYcod(String ycod) {
-        this.ycod = ycod;
-    }
-
-    public String getAddresss() {
-        return addresss;
-    }
-
-    public void setAddresss(String addresss) {
-        this.addresss = addresss;
-    }
-
-}
-public class Data2ResourceObject {
-
-    private Data data;
-
-    public Data getData() {
-        return data;
-    }
-
-    public void setData(Data data) {
-        this.data = data;
-    }
-
-}
-class FareInfo {
-
-    private WorkingDay[] workingDay = null;
-    private Holiday[] holiday = null;
-
-    public WorkingDay[] getWorkingDay() {
-        return workingDay;
-    }
-
-    public void setWorkingDay(WorkingDay[] workingDay) {
-        this.workingDay = workingDay;
-    }
-
-    public Holiday[] getHoliday() {
-        return holiday;
-    }
-
-    public void setHoliday(Holiday[] holiday) {
-        this.holiday = holiday;
-    }
-
-}
-class Holiday {
-
-    private String period;
-    private String fare;
-
-    public String getPeriod() {
-        return period;
-    }
-
-    public void setPeriod(String period) {
-        this.period = period;
-    }
-
-    public String getFare() {
-        return fare;
-    }
-
-    public void setFare(String fare) {
-        this.fare = fare;
     }
 
 }
@@ -442,6 +243,212 @@ class Park {
     }
 
 }
+
+class ChargeStation {
+
+    private String stationName;
+    private String stationAddr;
+    private String locLongitude;
+    private String locLatitude;
+    private String openFlag;
+    private String isCharge;
+    private String contactName;
+    private String contactMobilNo;
+    private String scoketCount;
+    private String availableCount;
+    private String country;
+    private String town;
+
+    public String getStationName() {
+        return stationName;
+    }
+
+    public void setStationName(String stationName) {
+        this.stationName = stationName;
+    }
+
+    public String getStationAddr() {
+        return stationAddr;
+    }
+
+    public void setStationAddr(String stationAddr) {
+        this.stationAddr = stationAddr;
+    }
+
+    public String getLocLongitude() {
+        return locLongitude;
+    }
+
+    public void setLocLongitude(String locLongitude) {
+        this.locLongitude = locLongitude;
+    }
+
+    public String getLocLatitude() {
+        return locLatitude;
+    }
+
+    public void setLocLatitude(String locLatitude) {
+        this.locLatitude = locLatitude;
+    }
+
+    public String getOpenFlag() {
+        return openFlag;
+    }
+
+    public void setOpenFlag(String openFlag) {
+        this.openFlag = openFlag;
+    }
+
+    public String getIsCharge() {
+        return isCharge;
+    }
+
+    public void setIsCharge(String isCharge) {
+        this.isCharge = isCharge;
+    }
+
+    public String getContactName() {
+        return contactName;
+    }
+
+    public void setContactName(String contactName) {
+        this.contactName = contactName;
+    }
+
+    public String getContactMobilNo() {
+        return contactMobilNo;
+    }
+
+    public void setContactMobilNo(String contactMobilNo) {
+        this.contactMobilNo = contactMobilNo;
+    }
+
+    public String getScoketCount() {
+        return scoketCount;
+    }
+
+    public void setScoketCount(String scoketCount) {
+        this.scoketCount = scoketCount;
+    }
+
+    public String getAvailableCount() {
+        return availableCount;
+    }
+
+    public void setAvailableCount(String availableCount) {
+        this.availableCount = availableCount;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getTown() {
+        return town;
+    }
+
+    public void setTown(String town) {
+        this.town = town;
+    }
+
+}
+
+class Entrancecoord {
+
+    private EntrancecoordInfo[] entrancecoordInfo = null;
+
+    public EntrancecoordInfo[] getEntrancecoordInfo() {
+        return entrancecoordInfo;
+    }
+
+    public void setEntrancecoordInfo(EntrancecoordInfo[] entrancecoordInfo) {
+        this.entrancecoordInfo = entrancecoordInfo;
+    }
+
+}
+
+class EntrancecoordInfo {
+
+    private String xcod;
+    private String ycod;
+    private String addresss;
+
+    public String getXcod() {
+        return xcod;
+    }
+
+    public void setXcod(String xcod) {
+        this.xcod = xcod;
+    }
+
+    public String getYcod() {
+        return ycod;
+    }
+
+    public void setYcod(String ycod) {
+        this.ycod = ycod;
+    }
+
+    public String getAddresss() {
+        return addresss;
+    }
+
+    public void setAddresss(String addresss) {
+        this.addresss = addresss;
+    }
+
+}
+
+class FareInfo {
+
+    private WorkingDay[] workingDay = null;
+    private Holiday[] holiday = null;
+
+    public WorkingDay[] getWorkingDay() {
+        return workingDay;
+    }
+
+    public void setWorkingDay(WorkingDay[] workingDay) {
+        this.workingDay = workingDay;
+    }
+
+    public Holiday[] getHoliday() {
+        return holiday;
+    }
+
+    public void setHoliday(Holiday[] holiday) {
+        this.holiday = holiday;
+    }
+
+}
+
+class Holiday {
+
+    private String period;
+    private String fare;
+
+    public String getPeriod() {
+        return period;
+    }
+
+    public void setPeriod(String period) {
+        this.period = period;
+    }
+
+    public String getFare() {
+        return fare;
+    }
+
+    public void setFare(String fare) {
+        this.fare = fare;
+    }
+
+}
+
 class WorkingDay {
 
     private String period;

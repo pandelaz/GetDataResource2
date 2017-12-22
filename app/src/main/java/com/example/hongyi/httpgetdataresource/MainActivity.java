@@ -1,10 +1,5 @@
 package com.example.hongyi.httpgetdataresource;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,6 +22,9 @@ import java.nio.charset.Charset;
 import java.util.zip.GZIPInputStream;
 
 public class MainActivity extends AppCompatActivity {
+
+    //資料來源2 data object
+    Data2ResourceObject data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,12 +55,16 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(Response response) throws IOException {
 
                         String DataString = readToString(response.body().byteStream());
-                        //Log.d("debug",DataString);
 
                         Gson gson = new Gson();
-                        Data2ResourceObject data = gson.fromJson(DataString,Data2ResourceObject.class);
+                        //到這裡已經完成讀取資料來源二並且轉換至object完成
+                        data = gson.fromJson(DataString,Data2ResourceObject.class);
 
-                        Log.d("debug","");
+                        //第0個停車場資訊讀取範例 詳細看Data2ResourceObject.java內的宣告
+                        Log.d("show example Id",data.getData().getPark()[0].getId());
+                        Log.d("show example Name",data.getData().getPark()[0].getName());
+                        Log.d("show example tw97x",data.getData().getPark()[0].getTw97x());
+                        Log.d("show example tw97y",data.getData().getPark()[0].getTw97y());
                     }
                 });
             }
